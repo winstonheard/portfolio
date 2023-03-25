@@ -237,3 +237,14 @@ footer {
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width: 800px) {
+    #contact ul {
+        display: block;
+        justify-content: space-between;
+        min-width: 400px;
+        font-family: optima, sans-serif;
+        font-size: 2.5rem;
+        margin-bottom:1rem;
+};
+};
