@@ -1,82 +1,186 @@
-body {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+:root {
+    --primary: rgb(40, 40, 40);
+    --secondary: white;
+    --accent: red;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {    
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(40, 40, 40);
     color: white;
 }
 
 header {
+    font-family: optima, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3%;
-    background-color: red;
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 h1 {
-    font-size: 250%;    
+    font-size: 5.5rem;    
 }
 
 h2 {
-    font-size: 275%;
-    position: relative;
-    margin-top: -20px;
+    font-family: optima, sans-serif;
+    font-size: 3rem;
+    
+    
+}
+
+h3 {
+    font-family: optima, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom:1rem;
 }
 
 nav ul {
     /* float: right; */
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
-    min-width: 350px;
+    min-width: 400px;
 }
 
 nav a {
-    color: black;
+    color: var(--accent);
     text-decoration: none;
     font-weight: bold;
 }
 
 main {
-    display: flex;
-    flex: 1 1 0;
-    max-width: 1200px;
-    margin: 3%;
+    /* display: flex; */
+    /* flex: 1 1 0;
+    max-width: 1200px; */
+    margin: 3rem auto;
+    font-size: 1.75rem;
 }
 
 img {
-    border: solid white;
+    border: solid var(--secondary);
+}
+
+footer {
+    font-family: optima, sans-serif;
+    text-align: center;
+    justify-content: space-between;
+    padding: 3%;
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 .textstroke {
-    color: red;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    color: var(--secondary);
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 .border {
-    /* border-top: solid; */
     border-left: solid;
-    padding-top: 1%;
+    margin-top: 1%;
     padding-left: 3%;
-    /* margin-top: -2%; */
+    overflow: auto;
+    
+}
+
+.image {
+    opacity: 1;
+    backface-visibility: hidden;
+}
+
+.description {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+}
+
+.work-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* margin: 3%; */
+}
+
+.work-column {
+    flex: 1 0 100%;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .work-card {
-    display: flex;
-    flex-direction: column;
-    /* min-height: 100%; */
-    padding: 2%;
+    position: relative;
+    min-height: 100%;
+    padding: 2rem;
+}
 
+.work-card img {
+    max-width: 100%;
+}
+
+/* hover effects are used to allow for project descriptions to appear on page without taking up real estate */
+.work-card:hover .image {
+    opacity: 0.3;
+}
+
+.work-card:hover .description {
+    opacity: 1;
+}
+
+.text {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 2rem;
+}
+.card-header {
+    position: relative;
+    float:right;
+    margin: -2rem -.03rem -1.5rem 0rem;
+    padding: .75rem 1rem;
+    background-color: var(--secondary);
+    color: var(--accent);
+}
+
+.card-header p {
+    font-size: 1.5rem;
+}
+
+.work-showcase h3 {
+    position: relative;
+    margin: -2rem -.05rem -3.5rem 45rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    background-color: var(--secondary);
+    color:var(--accent);
 }
 
 .showcase-image {
     max-width: 600px;
 }
 
+
+/* each section is given a unique id to link from the top navigation bar */
 #aboutme {
     flex: 1 1 0;
     margin: 3%;
+}
+
+#aboutme img {
+    width: 10%;
+    float:left;
+    margin-right: 3%;
 }
 
 #work {
@@ -84,8 +188,52 @@ img {
     margin: 3%;
 }
 
-@media screen and (max-width: 768px) {
-    header, main {
-        flex-direction: column;
+#contact {
+    flex: 1 1 0;
+    margin: 3%;
+}
+
+#contact ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 400px;
+    font-family: optima, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom:1rem;
+}
+
+#contact a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* adjust the layout of the page so that it is tailored to different screen sizes */
+@media screen and (min-width: 768px) {
+    .work-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .work-column {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        text-align: center;
+        width: 75%;
+        margin: 0 auto;
     }
 }

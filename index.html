@@ -15,30 +15,95 @@
     <nav>
       <ul>
         <li><a href="#aboutme">About me</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact me</a></li>
-        <li><a href="#">Resume</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact me</a></li>
+        <li><a href="./assets/docs/Winston Heard_Resume.docx">Resume</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="aboutme">
-        <h2>About me</h2>
-        <p class="border">I offer 15+ years of experience designing and developing websites, learning materials, and training plans, and streamlining employee performance and technical service delivery processes. These experiences have allowed me to implement technical knowledge and critical decision making on product-specific issues, while operating in competitive work environments to elevate commercial operations.</p>
- 
-          <p class="border">As a web developer and esigner, I strive to fulfill multiple business needs including developing designs for marketing materials, websites and logos, including stakeholder communication to elevate market outlook and attract potential customers. My widespread and diverse experience in project management, coding, and front-end development gives me a technical, analytical, and customer-centric view that allows me to open up avenues for business growth.</p>
+      <h2>About me</h2>
+        <div class="border">
+          <p><img src="./assets/images/headshot.png" alt="Winston headshot">Hi, I'm Winston! I offer 15+ years of experience designing and developing websites, learning materials, and training plans, and streamlining employee performance and technical service delivery processes. These experiences have allowed me to implement technical knowledge and critical decision making on product-specific issues, while operating in competitive work environments to elevate commercial operations.</p>
+          <p>&nbsp;</p>
+          <p>As a web developer and designer, I strive to fulfill multiple business needs including developing designs for marketing materials, websites and logos, including stakeholder communication to elevate market outlook and attract potential customers. My widespread and diverse experience in project management, coding, and front-end development gives me a technical, analytical, and customer-centric view that allows me to open up avenues for business growth.</p>
+        </div>
     </section>
 
     <section id="work">
       <h2>Work</h2>
-      <p class="border">Stuff I've done</p>
-      <div class="work-card">
-        <a href="https://maislinn.github.io/Group_Repo/" target="_blank"><img class="showcase-image" src="./assets/images/you_choose.png"></a>
+      <div class="border">
+        
+      <section class="work-row">
+        <div class ="work-card">
+          
+            <div>
+              <div class = "card-header">
+                <div class="border">
+                <h3>Movie search application</h3>
+               <p>OMDB and Youtube APIs, HTML, CSS, Javascript</p>
+               </div>
+              </div>
+            <a href="https://maislinn.github.io/Group_Repo/" target="_blank"><img src="./assets/images/you_choose_wide.png" class="image" alt="movie search application screenshot">
+              <div class="description">
+                <div class="text">Application that allows the user to search movie titles and synopses, as well as play trailers</div>
+              </div></a>
+            </div>
+            
+        </div>
+        
+      
+      <div class="work-column">
+      <figure class="work-card">
+        <div class="card-header">
+          <div class="border">
+        <h3>Craft supply exchange application</h3>
+        <p>Bcrypt, Express, MongoDB, Mysql2, Insomnia, JS, CSS, HTML</p>
+        </div>
+        </div>
+        <a href="https://craft-but-not-least.herokuapp.com/" target="_blank"><img src="./assets/images/craft_but_not_least.png" class="image" alt="craft supply exchange application screenshot">
+          <div class="description">
+            <div class="text">Application that allows user to create an account, search for craft supplies, and list supplies for sell or trade with other users</div>
+          </div></a>
+        
+        
+      </figure>
       </div>
 
-      <div class="work-card">
-        <a href="https://craft-but-not-least.herokuapp.com/" target="_blank"><img class="showcase-image" src="./assets/images/craft_but_not_least.png"></a>
-      </div>
-  </section>
+      <div class="work-column">
+        <figure class="work-card">
+          <div class="card-header">
+            <div class="border">
+          <h3>Password generator</h3>
+          <p>Javascript, HTML, VS code</p>
+          </div>
+          </div>
+          <a href="https://winstonheard.github.io/password-generator/" target="_blank"><img src="./assets/images/password_generator.png" class="image">
+            <div class="description">
+              <div class="text">Application that generates a random password based on criteria determined by the user, including passoword length and characters used</div>
+            </div></a>
+          
+        </figure>
+        </div>
+    </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact me</h2>
+        <div class="border">
+          <ul>
+            <li>404.713.8218</li>
+            <li><a href="mailto:winston.nolen@gmail.com">winston.nolen@gmail.com</a></li>
+            <li><a href="https://github.com/winstonheard" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/winston-heard-3408274" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <p>Winston<span class="textstroke">Heard</span> 2023</p>
+        
+      </footer>
   </main>
